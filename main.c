@@ -6,7 +6,7 @@
 */
 #include <stdio.h>
 
-struct Sphere
+struct Position3D
 {
     double x;
     double y;
@@ -15,10 +15,14 @@ struct Sphere
 
 int main(void) 
 {
-    double sphereX, sphereY, sphereZ, radiusSquared; // x,y,z components of centre of sphere
-    sphereX = 1.0;
-    sphereY = 1.0;
-    sphereZ = 2.0;
-    radiusSquared = 1.5;
+    struct Position3D sphere = {1.0, 1.0, 2.0}; // x,y,z components of centre of sphere
+    double radius_squared = 1.5;
+    static struct Position3D origin = {0.0, 0.0, 0.0};
+    struct Position3D unit_vector = {0.0, 0.0, 1.0};
     return 0;
 }
+
+
+
+
+
