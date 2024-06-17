@@ -13,6 +13,11 @@ struct Position3D
     double z;
 };
 
+int dotproduct(struct Position3D vector_b, struct Position3D vector_a)
+{
+    return (vector_a.x * vector_b.x) + (vector_a.y * vector_b.y) + (vector_a.z * vector_b.z);
+}
+
 int main(void) 
 {
     struct Position3D sphere = {1.0, 1.0, 2.0}; // x,y,z components of centre of sphere
